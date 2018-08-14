@@ -1,0 +1,22 @@
+{
+  "name": "theremin",
+  "version": "1.0.0",
+  "description": "Play the theremin in your browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirandaio/theremin.git"
+  },
+  "author": "Alfredo Miranda <alfredo@miranda.io> (https://miranda.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirandaio/theremin/issues"
+  },
+  "homepage": "https://github.com/mirandaio/theremin#readme",
+  "dependencies": {
+    "react": "^16.4.2"
+  }
+}
