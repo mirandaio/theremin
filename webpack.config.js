@@ -1,38 +1,11 @@
-const webpack = require('webpack');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const config = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
-      },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader'
-        })
-      }
-    ]
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist')
   },
-  plugins: [
-    new HtmlWebpackPlugin({ template: 'src/index.html' }),
-    new ExtractTextPlugin('styles.css')
-  ]
+  plugins: [new HtmlWebpackPlugin({ template: 'src/index.html' })]
 };
-
-if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-      }
-    })
-  );
-}
-
-module.exports = config;
