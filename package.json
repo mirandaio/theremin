@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Play the theremin in your browser",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write",
     "prettier:all": "prettier --write 'src/**/*.js'"
@@ -34,6 +34,7 @@
     "style-loader": "^0.22.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "4.1.4"
   }
 }
