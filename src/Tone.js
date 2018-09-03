@@ -5,14 +5,14 @@ class Tone extends Component {
   oscillator = createOscillator();
 
   componentDidMount() {
-    this.doImperativeStuff();
+    this.operate();
   }
 
   componentDidUpdate() {
-    this.doImperativeStuff();
+    this.operate();
   }
 
-  doImperativeStuff() {
+  operate() {
     const { isPlaying, pitch, volume } = this.props;
     if (isPlaying) {
       this.oscillator.play();
