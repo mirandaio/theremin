@@ -13,5 +13,10 @@ module.exports = {
       { test: /\.css$/, use: ['style-loader', 'css-loader'] }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: 'src/index.html' })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      favicon: 'src/favicon.svg'
+    })
+  ]
 };
